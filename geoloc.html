@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body> 
+
+	<h2>Geolocation</h2> 
+	<button id = "find -me"> show my location</button><br>
+	<p id = "status"></p>
+	<a id = "map-link" target="_blank"></a>
+
+	<script> 
+
+		var status = document.querySelector('#status');
+		var mapLink = document.querySelector('#map-link');
+
+		mapLink.href = '';
+		
+		mapLink.textContent = '';
+
+		function success(position){
+
+	       var latitude = position.coords.latitude;
+	       var longitude = position.coords.longitude; 
+			
+			status.textContent = '';
+			mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+			mapLink.textContent = `Latitude: ${latitude} , longitude: ${longitude}`;
+
+
+			
+		} 
+
+		function failed(error){
+			console.log(error);
+		} 
+
+		if ("geolocation" in navigator) {
+
+			navigator.geolocation.getCurrentPosition(success,failed);
+
+		console.log("geolocation supported")
+	  
+	  } else {
+
+	  	console.log("geolocation not supported")
+
+	  }
+
+
+
+	</script>
+
+</body>
+</html>

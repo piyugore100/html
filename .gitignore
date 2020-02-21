@@ -1,0 +1,16 @@
+/assets
+/movi3_files
+/net2._files
+/net3._files
+/net5._files
+*.jpg
+*.jpeg
+*.gif
+
+*.raw
+*.png
+*.tiff
+
+*.sav
+
+*.pdf

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title> 
+	<!-- <meta charset="utf-8"> -->
+</head>
+<body> 
+  
+
+  <p>Add city</p>
+  <input type="text" id="city">
+  <button onclick="addcity()">Add</button>
+  <ul id="list"></ul>
+
+
+
+  	<script>
+  		
+  	function addcity(){ 
+  		var li = document.createElement("li"); 
+  		var ul = document.getElementById('list');
+  		 var input = document.getElementById('city');
+       
+
+
+  		 li.textContent = input.value;
+  		 ul.value = "";
+  		 ul.appendChild("li"); 
+
+       
+
+
+  		} 
+
+    
+
+
+
+
+  		
+  	</script>
+
+  </body>
+  </html>

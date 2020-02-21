@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Event</title>
+</head>
+<body style="background-color: cyan"> 
+
+	<form action="/register">
+		<input id="mobile" type="text" placeholder="Mobile"><br>
+		<input type="submit" value="Submit">
+	</form>
+	<script>
+		var form = document.querySelector("form");
+		form.addEventListener('submit',function(e){
+
+			var moblie = document.getElementById('moblie').value;
+
+			if(moblie.lenght != 10 || isNaN(moblie))
+			{
+				e.preventDefult();
+				alert("enter 10 digit moblie number")
+			}
+		})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom event </title>
+</head>
+<body> 
+	<a href="http:"//www.topperskills.com"> Topper skills</a>
+
+	<script>
+		var a = document.querySelector("a");
+		a.addEventListener('click',function(e){
+			var str = a.href;
+			var domainArr = str.split(".");
+			var domain = domainArr.pop();
+			if(domain !="in/"){
+			e.preventDefult();
+			alert("only.in domain are allowed");
+
+		}
+		})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Event</title>
+</head>
+<body> 
+	<div style="height: 500px;"></div>
+
+	<script> 
+
+		if(navigator.online)
+			alert("you are online");
+		window.addEventListener('online',function(e){
+
+			 console.log("you are now connected to the network.");
+		});
+
+		window.addEventListener('offline',function(e){
+			console.log("you are not connected to the network.");
+		});
+	</script>
+
+
+</body>
+</html>
